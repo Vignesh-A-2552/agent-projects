@@ -33,7 +33,7 @@ import {
   UserMessageAttachments,
 } from "@/src/feature/assistant-ui/attachment";
 
-import { cn } from "@/lib/utils";
+import { cn } from "@/src/lib/utils";
 
 export const Thread: FC = () => {
   return (

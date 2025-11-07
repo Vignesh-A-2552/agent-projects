@@ -6,13 +6,26 @@ import {
 export const useChatRuntime = () => {
   const adapter: ChatModelAdapter = {
     async *run({ messages, abortSignal }) {
+
+      const lastUserMessage = messages.filter((message) => message.role === "user").pop();
+      
+      if (!lastUserMessage) {
+        throw new Error("No user message found");
+      }
+
+      const textContent =lastUserMessage.content?.find((item) => item.type === "text")?.text || "";
+
+      if (!textContent) {
+        throw new Error("No text found");
+      }
+
       const response = await fetch("http://localhost:8080/api/v1/chat", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          messages,
+          user_input: textContent,
         }),
         signal: abortSignal,
       });

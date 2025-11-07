@@ -20,7 +20,7 @@ import {
   BreadcrumbPage,
   BreadcrumbSeparator,
 } from "@/src/components/ui/breadcrumb";
-import { useChatRuntime } from "@/src/hooks/use-chat-runtime";
+import { useChatRuntime } from "@/src/feature/assistant-ui/hooks/use-chat-runtime";
 
 export const Assistant = () => {
   const runtime = useChatRuntime();

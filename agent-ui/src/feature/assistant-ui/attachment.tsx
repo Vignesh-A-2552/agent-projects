@@ -28,7 +28,7 @@ import {
   AvatarFallback,
 } from "@/src/components/ui/avatar";
 import { TooltipIconButton } from "@/src/feature/assistant-ui/tooltip-icon-button";
-import { cn } from "@/lib/utils";
+import { cn } from "@/src/lib/utils";
 
 const useFileSrc = (file: File | undefined) => {
   const [src, setSrc] = useState<string | undefined>(undefined);
