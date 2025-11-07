@@ -23,15 +23,15 @@ import type { FC } from "react";
 import { LazyMotion, MotionConfig, domAnimation } from "motion/react";
 import * as m from "motion/react-m";
 
-import { Button } from "@/components/ui/button";
-import { MarkdownText } from "@/components/assistant-ui/markdown-text";
-import { ToolFallback } from "@/components/assistant-ui/tool-fallback";
-import { TooltipIconButton } from "@/components/assistant-ui/tooltip-icon-button";
+import { Button } from "@/src/components/ui/button";
+import { MarkdownText } from "@/src/feature/assistant-ui/markdown-text";
+import { ToolFallback } from "@/src/feature/assistant-ui/tool-fallback";
+import { TooltipIconButton } from "@/src/feature/assistant-ui/tooltip-icon-button";
 import {
   ComposerAddAttachment,
   ComposerAttachments,
   UserMessageAttachments,
-} from "@/components/assistant-ui/attachment";
+} from "@/src/feature/assistant-ui/attachment";
 
 import { cn } from "@/lib/utils";
 

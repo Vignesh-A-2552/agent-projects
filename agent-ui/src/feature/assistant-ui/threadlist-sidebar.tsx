@@ -10,8 +10,8 @@ import {
   SidebarMenuButton,
   SidebarMenuItem,
   SidebarRail,
-} from "@/components/ui/sidebar";
-import { ThreadList } from "@/components/assistant-ui/thread-list";
+} from "@/src/components/ui/sidebar";
+import { ThreadList } from "@/src/feature/assistant-ui/thread-list";
 
 export function ThreadListSidebar({
   ...props

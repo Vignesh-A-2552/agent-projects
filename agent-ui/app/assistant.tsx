@@ -2,17 +2,16 @@
 
 import { AssistantRuntimeProvider } from "@assistant-ui/react";
 import {
-  useChatRuntime,
   AssistantChatTransport,
 } from "@assistant-ui/react-ai-sdk";
-import { Thread } from "@/components/assistant-ui/thread";
+import { Thread } from "@/src/feature/assistant-ui/thread";
 import {
   SidebarInset,
   SidebarProvider,
   SidebarTrigger,
-} from "@/components/ui/sidebar";
-import { ThreadListSidebar } from "@/components/assistant-ui/threadlist-sidebar";
-import { Separator } from "@/components/ui/separator";
+} from "@/src/components/ui/sidebar";
+import { ThreadListSidebar } from "@/src/feature/assistant-ui/threadlist-sidebar";
+import { Separator } from "@/src/components/ui/separator";
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -20,14 +19,11 @@ import {
   BreadcrumbList,
   BreadcrumbPage,
   BreadcrumbSeparator,
-} from "@/components/ui/breadcrumb";
+} from "@/src/components/ui/breadcrumb";
+import { useChatRuntime } from "@/src/hooks/use-chat-runtime";
 
 export const Assistant = () => {
-  const runtime = useChatRuntime({
-    transport: new AssistantChatTransport({
-      api: "/api/chat",
-    }),
-  });
+  const runtime = useChatRuntime();
 
   return (
     <AssistantRuntimeProvider runtime={runtime}>

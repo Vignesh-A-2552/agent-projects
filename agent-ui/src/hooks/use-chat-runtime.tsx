@@ -1,0 +1,78 @@
+import {
+  useLocalRuntime,
+  type ChatModelAdapter,
+} from "@assistant-ui/react";
+
+export const useChatRuntime = () => {
+  const adapter: ChatModelAdapter = {
+    async *run({ messages, abortSignal }) {
+      const response = await fetch("http://localhost:8080/api/v1/chat", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          messages,
+        }),
+        signal: abortSignal,
+      });
+
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+
+      const reader = response.body?.getReader();
+      const decoder = new TextDecoder();
+
+      if (!reader) {
+        throw new Error("No response body");
+      }
+
+      let fullText = "";
+
+      try {
+        while (true) {
+          const { done, value } = await reader.read();
+          if (done) break;
+
+          const chunk = decoder.decode(value, { stream: true });
+          const lines = chunk.split("\n");
+
+          for (const line of lines) {
+            if (line.startsWith("data: ")) {
+              const data = line.slice(6);
+
+              if (data === "[DONE]") {
+                continue;
+              }
+
+              try {
+                const parsed = JSON.parse(data);
+                const content = parsed.choices?.[0]?.delta?.content || parsed.content || "";
+
+                if (content) {
+                  fullText += content;
+                  yield {
+                    content: [
+                      {
+                        type: "text" as const,
+                        text: fullText,
+                      },
+                    ],
+                  };
+                }
+              } catch (e) {
+                // Skip invalid JSON
+                continue;
+              }
+            }
+          }
+        }
+      } finally {
+        reader.releaseLock();
+      }
+    },
+  };
+
+  return useLocalRuntime(adapter);
+};
