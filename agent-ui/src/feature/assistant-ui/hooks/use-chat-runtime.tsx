@@ -19,13 +19,13 @@ export const useChatRuntime = () => {
         throw new Error("No text found");
       }
 
-      const response = await fetch("http://localhost:8080/api/v1/chat", {
+      const response = await fetch("http://localhost:8080/api/v1/chat/research", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          user_input: textContent,
+          query: textContent,
         }),
         signal: abortSignal,
       });
