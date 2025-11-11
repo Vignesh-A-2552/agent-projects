@@ -1,9 +1,7 @@
 "use client";
 
+import { useState } from "react";
 import { AssistantRuntimeProvider } from "@assistant-ui/react";
-import {
-  AssistantChatTransport,
-} from "@assistant-ui/react-ai-sdk";
 import { Thread } from "@/src/feature/assistant-ui/thread";
 import {
   SidebarInset,
@@ -21,9 +19,12 @@ import {
   BreadcrumbSeparator,
 } from "@/src/components/ui/breadcrumb";
 import { useChatRuntime } from "@/src/feature/assistant-ui/hooks/use-chat-runtime";
+import { CartButton } from "@/src/components/cart/cart-button";
+import { CartSidebar } from "@/src/components/cart/cart-sidebar";
 
 export const Assistant = () => {
   const runtime = useChatRuntime();
+  const [isCartOpen, setIsCartOpen] = useState(false);
 
   return (
     <AssistantRuntimeProvider runtime={runtime}>
@@ -51,11 +52,20 @@ export const Assistant = () => {
                   </BreadcrumbItem>
                 </BreadcrumbList>
               </Breadcrumb>
+              <div className="ml-auto">
+                <CartButton onClick={() => setIsCartOpen(true)} />
+              </div>
             </header>
             <div className="flex-1 overflow-hidden">
               <Thread />
             </div>
           </SidebarInset>
+
+          {/* Cart Sidebar */}
+          <CartSidebar
+            isOpen={isCartOpen}
+            onClose={() => setIsCartOpen(false)}
+          />
         </div>
       </SidebarProvider>
     </AssistantRuntimeProvider>

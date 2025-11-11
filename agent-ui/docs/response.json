@@ -1,0 +1,219 @@
+{
+  "query": "Show me products available in the store",
+  "follow_up_question": "Would you like to see accessories or alternatives related to 'Show me products available in the store'?",
+  "products": [
+    {
+      "id": "1",
+      "name": "iPhone 15 Pro Max",
+      "discount_price": 1199,
+      "price": 1299,
+      "main_category": "Electronics",
+      "sub_category": "Smartphones",
+      "ratings": 4.9,
+      "review_count": 66,
+      "images": [
+        "https://images.unsplash.com/photo-1592750475338-74b7b21085ab?w=400"
+      ],
+      "stock_quantity": 236,
+      "in_stock": true,
+      "shipping": "Free Shipping • 3-5 days",
+      "return_policy": "30-Day Return Policy",
+      "warranty": "1-Year Warranty Included",
+      "badges": ["new", "verified"],
+      "recent_purchases": 28
+    },
+    {
+      "id": "2",
+      "name": "Samsung Galaxy S24 Ultra",
+      "discount_price": 1049,
+      "price": 1199,
+      "main_category": "Electronics",
+      "sub_category": "Smartphones",
+      "ratings": 4.9,
+      "review_count": 270,
+      "images": [
+        "https://images.unsplash.com/photo-1592750475338-74b7b21085ab?w=400",
+        "https://images.unsplash.com/photo-1592750475338-74b7b21085ab?w=400"
+      ],
+      "stock_quantity": 475,
+      "in_stock": true,
+      "shipping": "Free Shipping • 1-4 days",
+      "return_policy": "30-Day Return Policy",
+      "warranty": "1-Year Warranty Included",
+      "badges": ["featured"],
+      "recent_purchases": 28
+    },
+    {
+      "id": "3",
+      "name": "AirPods Pro (2nd Gen)",
+      "discount_price": 199,
+      "price": 249,
+      "main_category": "Electronics",
+      "sub_category": "Audio",
+      "ratings": 4.3,
+      "review_count": 389,
+      "images": [
+        "https://images.unsplash.com/photo-1592750475338-74b7b21085ab?w=400",
+        "https://images.unsplash.com/photo-1592750475338-74b7b21085ab?w=400",
+        "https://images.unsplash.com/photo-1592750475338-74b7b21085ab?w=400"
+      ],
+      "stock_quantity": 119,
+      "in_stock": true,
+      "shipping": "Free Shipping • 1-5 days",
+      "return_policy": "30-Day Return Policy",
+      "warranty": "1-Year Warranty Included",
+      "badges": ["sale"],
+      "recent_purchases": 79
+    },
+    {
+      "id": "4",
+      "name": "Sony WH-1000XM5",
+      "discount_price": 329,
+      "price": 399,
+      "main_category": "Electronics",
+      "sub_category": "Headphones",
+      "ratings": 4.8,
+      "review_count": 113,
+      "images": [
+        "https://images.unsplash.com/photo-1592750475338-74b7b21085ab?w=400",
+        "https://images.unsplash.com/photo-1592750475338-74b7b21085ab?w=400",
+        "https://images.unsplash.com/photo-1592750475338-74b7b21085ab?w=400"
+      ],
+      "stock_quantity": 241,
+      "in_stock": true,
+      "shipping": "Free Shipping • 2-5 days",
+      "return_policy": "30-Day Return Policy",
+      "warranty": "1-Year Warranty Included",
+      "badges": ["bestseller"],
+      "recent_purchases": 16
+    },
+    {
+      "id": "5",
+      "name": "Apple Watch Series 9",
+      "discount_price": 449,
+      "price": 499,
+      "main_category": "Electronics",
+      "sub_category": "Wearables",
+      "ratings": 4.5,
+      "review_count": 241,
+      "images": [
+        "https://images.unsplash.com/photo-1592750475338-74b7b21085ab?w=400",
+        "https://images.unsplash.com/photo-1592750475338-74b7b21085ab?w=400",
+        "https://images.unsplash.com/photo-1592750475338-74b7b21085ab?w=400",
+        "https://images.unsplash.com/photo-1592750475338-74b7b21085ab?w=400"
+      ],
+      "stock_quantity": 63,
+      "in_stock": true,
+      "shipping": "Free Shipping • 3-4 days",
+      "return_policy": "30-Day Return Policy",
+      "warranty": "1-Year Warranty Included",
+      "badges": ["new"],
+      "recent_purchases": 90
+    },
+    {
+      "id": "6",
+      "name": "MacBook Air M3",
+      "discount_price": 1299,
+      "price": 1399,
+      "main_category": "Electronics",
+      "sub_category": "Laptops",
+      "ratings": 4.1,
+      "review_count": 353,
+      "images": [
+        "https://images.unsplash.com/photo-1592750475338-74b7b21085ab?w=400",
+        "https://images.unsplash.com/photo-1592750475338-74b7b21085ab?w=400"
+      ],
+      "stock_quantity": 182,
+      "in_stock": true,
+      "shipping": "Free Shipping • 3-4 days",
+      "return_policy": "30-Day Return Policy",
+      "warranty": "1-Year Warranty Included",
+      "badges": ["verified"],
+      "recent_purchases": 84
+    },
+    {
+      "id": "7",
+      "name": "Dell XPS 15",
+      "discount_price": 1679,
+      "price": 1799,
+      "main_category": "Electronics",
+      "sub_category": "Laptops",
+      "ratings": 4.5,
+      "review_count": 166,
+      "images": [
+        "https://images.unsplash.com/photo-1592750475338-74b7b21085ab?w=400",
+        "https://images.unsplash.com/photo-1592750475338-74b7b21085ab?w=400",
+        "https://images.unsplash.com/photo-1592750475338-74b7b21085ab?w=400"
+      ],
+      "stock_quantity": 399,
+      "in_stock": true,
+      "shipping": "Free Shipping • 2-4 days",
+      "return_policy": "30-Day Return Policy",
+      "warranty": "1-Year Warranty Included",
+      "badges": ["bestseller"],
+      "recent_purchases": 26
+    },
+    {
+      "id": "8",
+      "name": "Canon EOS R6",
+      "discount_price": 2199,
+      "price": 2499,
+      "main_category": "Electronics",
+      "sub_category": "Cameras",
+      "ratings": 4.4,
+      "review_count": 484,
+      "images": [
+        "https://images.unsplash.com/photo-1592750475338-74b7b21085ab?w=400"
+      ],
+      "stock_quantity": 221,
+      "in_stock": true,
+      "shipping": "Free Shipping • 3-6 days",
+      "return_policy": "30-Day Return Policy",
+      "warranty": "1-Year Warranty Included",
+      "badges": ["pro"],
+      "recent_purchases": 58
+    },
+    {
+      "id": "9",
+      "name": "GoPro Hero 12",
+      "discount_price": 449,
+      "price": 499,
+      "main_category": "Electronics",
+      "sub_category": "Cameras",
+      "ratings": 4.2,
+      "review_count": 401,
+      "images": [
+        "https://images.unsplash.com/photo-1592750475338-74b7b21085ab?w=400",
+        "https://images.unsplash.com/photo-1592750475338-74b7b21085ab?w=400"
+      ],
+      "stock_quantity": 142,
+      "in_stock": true,
+      "shipping": "Free Shipping • 2-4 days",
+      "return_policy": "30-Day Return Policy",
+      "warranty": "1-Year Warranty Included",
+      "badges": ["sale"],
+      "recent_purchases": 100
+    },
+    {
+      "id": "10",
+      "name": "Apple TV 4K",
+      "discount_price": 159,
+      "price": 179,
+      "main_category": "Electronics",
+      "sub_category": "Streaming",
+      "ratings": 4.1,
+      "review_count": 233,
+      "images": [
+        "https://images.unsplash.com/photo-1592750475338-74b7b21085ab?w=400",
+        "https://images.unsplash.com/photo-1592750475338-74b7b21085ab?w=400"
+      ],
+      "stock_quantity": 319,
+      "in_stock": true,
+      "shipping": "Free Shipping • 1-6 days",
+      "return_policy": "30-Day Return Policy",
+      "warranty": "1-Year Warranty Included",
+      "badges": ["verified"],
+      "recent_purchases": 32
+    }
+  ]
+}
