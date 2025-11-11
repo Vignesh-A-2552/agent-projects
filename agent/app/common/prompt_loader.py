@@ -21,7 +21,7 @@ def load_prompt_config(config_path: str) -> Dict[str, Any]:
         yaml.YAMLError: If the YAML file is malformed or cannot be parsed.
     """
     logger.debug(f"Loading prompt config from prompts directory: {config_path}")
-    config_path = os.path.join("prompts", config_path)
+    config_path = os.path.join("app/prompts", config_path)
     return load_config(config_path)
 
 def load_config(config_path: str) -> Dict[str, Any]:
