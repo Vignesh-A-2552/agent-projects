@@ -21,10 +21,6 @@ export function ProductCard({ product, onViewDetails, className }: ProductCardPr
   const [isFavorite, setIsFavorite] = useState(false);
   const addItem = useCartStore((state) => state.addItem);
 
-  const discountPercentage = product.price
-    ? Math.round(((product.price - product.discount_price) / product.price) * 100)
-    : 0;
-
   const handleAddToCart = (e: React.MouseEvent) => {
     e.stopPropagation();
     addItem(product);
@@ -62,13 +58,6 @@ export function ProductCard({ product, onViewDetails, className }: ProductCardPr
             {product.badges.map((badge) => (
               <ProductBadge key={badge} type={badge} />
             ))}
-          </div>
-        )}
-
-        {/* Discount Badge */}
-        {discountPercentage > 0 && (
-          <div className="absolute right-2 top-2 rounded-full bg-red-500 px-2 py-1 text-xs font-bold text-white">
-            -{discountPercentage}% OFF
           </div>
         )}
 

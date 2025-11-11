@@ -40,10 +40,6 @@ export function ProductDetailModal({ product, isOpen, onClose }: ProductDetailMo
 
   const addItem = useCartStore((state) => state.addItem);
 
-  const discountPercentage = product.price
-    ? Math.round(((product.price - product.discount_price) / product.price) * 100)
-    : 0;
-
   const savings = product.price - product.discount_price;
 
   const handleAddToCart = () => {
@@ -112,7 +108,7 @@ export function ProductDetailModal({ product, isOpen, onClose }: ProductDetailMo
               </div>
               {savings > 0 && (
                 <p className="text-sm text-green-600 dark:text-green-500 font-medium">
-                  Save ${savings.toFixed(2)} ({discountPercentage}% OFF)
+                  Save ${savings.toFixed(2)}
                 </p>
               )}
             </div>
