@@ -90,14 +90,14 @@ export function ProductCard({ product, onViewDetails, className }: ProductCardPr
       </div>
 
       {/* Product Info */}
-      <div className="p-4 space-y-2">
+      <div className="p-3 sm:p-4 space-y-2">
         {/* Category */}
         <p className="text-xs text-gray-500 dark:text-gray-400">
           {product.main_category} • {product.sub_category}
         </p>
 
         {/* Product Name */}
-        <h3 className="font-semibold text-gray-900 dark:text-gray-100 line-clamp-2 min-h-[3rem]">
+        <h3 className="font-semibold text-sm sm:text-base text-gray-900 dark:text-gray-100 line-clamp-2 min-h-[2.5rem] sm:min-h-[3rem]">
           {product.name}
         </h3>
 
@@ -110,12 +110,12 @@ export function ProductCard({ product, onViewDetails, className }: ProductCardPr
         />
 
         {/* Price */}
-        <div className="flex items-baseline gap-2">
-          <span className="text-2xl font-bold text-green-600 dark:text-green-500">
+        <div className="flex items-baseline gap-2 flex-wrap">
+          <span className="text-xl sm:text-2xl font-bold text-green-600 dark:text-green-500">
             ${product.discount_price.toFixed(2)}
           </span>
           {product.price > product.discount_price && (
-            <span className="text-sm text-gray-500 dark:text-gray-400 line-through">
+            <span className="text-xs sm:text-sm text-gray-500 dark:text-gray-400 line-through">
               ${product.price.toFixed(2)}
             </span>
           )}
@@ -135,7 +135,7 @@ export function ProductCard({ product, onViewDetails, className }: ProductCardPr
 
         {/* Add to Cart Button */}
         <Button
-          className="w-full mt-3"
+          className="w-full mt-3 h-10 sm:h-11 text-sm sm:text-base"
           onClick={handleAddToCart}
           disabled={!product.in_stock}
         >

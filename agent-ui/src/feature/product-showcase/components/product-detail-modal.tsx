@@ -54,12 +54,12 @@ export function ProductDetailModal({ product, isOpen, onClose }: ProductDetailMo
 
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
-      <DialogContent className="max-w-6xl max-h-[90vh] overflow-y-auto">
+      <DialogContent className="max-w-6xl max-h-[90vh] overflow-y-auto p-4 sm:p-6">
         <DialogHeader>
           <DialogTitle className="sr-only">{product.name}</DialogTitle>
         </DialogHeader>
 
-        <div className="grid grid-cols-1 lg:grid-cols-1 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8">
           {/* Left Column - Images */}
           <div>
             <ImageCarousel images={product.images} alt={product.name} />
@@ -82,7 +82,7 @@ export function ProductDetailModal({ product, isOpen, onClose }: ProductDetailMo
             </p>
 
             {/* Product Name */}
-            <h1 className="text-3xl font-bold text-gray-900 dark:text-gray-100">
+            <h1 className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-gray-100">
               {product.name}
             </h1>
 
@@ -96,12 +96,12 @@ export function ProductDetailModal({ product, isOpen, onClose }: ProductDetailMo
 
             {/* Price */}
             <div className="space-y-2">
-              <div className="flex items-baseline gap-3">
-                <span className="text-4xl font-bold text-green-600 dark:text-green-500">
+              <div className="flex items-baseline gap-2 sm:gap-3 flex-wrap">
+                <span className="text-3xl sm:text-4xl font-bold text-green-600 dark:text-green-500">
                   ${product.discount_price.toFixed(2)}
                 </span>
                 {product.price > product.discount_price && (
-                  <span className="text-xl text-gray-500 dark:text-gray-400 line-through">
+                  <span className="text-lg sm:text-xl text-gray-500 dark:text-gray-400 line-through">
                     ${product.price.toFixed(2)}
                   </span>
                 )}
@@ -228,27 +228,27 @@ export function ProductDetailModal({ product, isOpen, onClose }: ProductDetailMo
             {/* Action Buttons */}
             <div className="space-y-3">
               <Button
-                className="w-full h-12 text-base"
+                className="w-full h-11 sm:h-12 text-sm sm:text-base"
                 size="lg"
                 onClick={handleAddToCart}
                 disabled={!product.in_stock}
               >
-                <ShoppingCart className="mr-2 h-5 w-5" />
+                <ShoppingCart className="mr-2 h-4 w-4 sm:h-5 sm:w-5" />
                 Add to Cart
               </Button>
 
               <Button
                 variant="outline"
-                className="w-full h-12 text-base"
+                className="w-full h-11 sm:h-12 text-sm sm:text-base"
                 size="lg"
                 onClick={handleBuyNow}
                 disabled={!product.in_stock}
               >
-                <CreditCard className="mr-2 h-5 w-5" />
+                <CreditCard className="mr-2 h-4 w-4 sm:h-5 sm:w-5" />
                 Buy Now
               </Button>
 
-              <div className="flex gap-2">
+              <div className="flex gap-2 sm:gap-2">
                 <Button
                   variant="outline"
                   size="icon"
@@ -273,7 +273,7 @@ export function ProductDetailModal({ product, isOpen, onClose }: ProductDetailMo
               <h3 className="font-semibold text-gray-900 dark:text-gray-100">
                 Ask about this product:
               </h3>
-              <div className="grid grid-cols-2 gap-2">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
                 <Button variant="outline" size="sm" className="text-xs">
                   What are the specs?
                 </Button>

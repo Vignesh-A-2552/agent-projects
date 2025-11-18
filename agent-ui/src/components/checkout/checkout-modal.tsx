@@ -107,12 +107,12 @@ export function CheckoutModal({ isOpen, onClose }: CheckoutModalProps) {
 
   return (
     <Dialog open={isOpen} onOpenChange={handleClose}>
-      <DialogContent className="max-w-3xl max-h-[90vh] overflow-y-auto">
+      <DialogContent className="max-w-3xl max-h-[90vh] overflow-y-auto p-4 sm:p-6">
         <DialogHeader>
           <DialogTitle>Checkout</DialogTitle>
         </DialogHeader>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8">
           {/* Left Column - Checkout Form */}
           <div>
             <form onSubmit={handleSubmit} className="space-y-6">
@@ -164,7 +164,7 @@ export function CheckoutModal({ isOpen, onClose }: CheckoutModalProps) {
                     />
                   </div>
 
-                  <div className="grid grid-cols-2 gap-3">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                     <div>
                       <label className="text-sm font-medium text-gray-700 dark:text-gray-300 mb-1 block">
                         City
@@ -230,7 +230,7 @@ export function CheckoutModal({ isOpen, onClose }: CheckoutModalProps) {
                     />
                   </div>
 
-                  <div className="grid grid-cols-2 gap-3">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                     <div>
                       <label className="text-sm font-medium text-gray-700 dark:text-gray-300 mb-1 block">
                         Expiry Date
@@ -264,7 +264,7 @@ export function CheckoutModal({ isOpen, onClose }: CheckoutModalProps) {
 
               <Button
                 type="submit"
-                className="w-full h-12 text-base"
+                className="w-full h-11 sm:h-12 text-sm sm:text-base"
                 size="lg"
                 disabled={isProcessing}
               >
@@ -274,7 +274,7 @@ export function CheckoutModal({ isOpen, onClose }: CheckoutModalProps) {
           </div>
 
           {/* Right Column - Order Summary */}
-          <div className="space-y-4">
+          <div className="space-y-4 lg:sticky lg:top-4">
             <h3 className="font-semibold text-lg">Order Summary</h3>
 
             {/* Cart Items */}
